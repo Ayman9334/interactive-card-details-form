@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+::placeholder { 
+    color: hsl(270, 3%, 87%);
+}
+
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+.theBg{
+    width: 35%;
+    height: 100%;
+    background: url('./images/bg-main-desktop.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.fstCard, .secCard{
+    width: 28.125rem;
+    height: 15.625rem;
+    color: hsl(0, 0%, 100%);
+    background-position: center;
+    position: absolute;
+}
+
+.fstCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('./images/bg-card-front.png') no-repeat;
+    background-size: 28.125rem 15.625rem;
+    padding: 1.25rem 2rem;
+    right: -7.187rem;
+    bottom: 52%;
+}
+.fstCard img{
+    width: 6rem;
+}
+
+.secCard{
+    background: url('./images/bg-card-back.png') no-repeat;
+    background-size: 28.125rem 15.625rem;
+    text-align: right;
+    right: -14.062rem;
+    top: 52%;
+    padding: 6.875rem 4.375rem;
+}
+
+
+.bigformcont{
+    display: flex;
+    width: 65%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+
+
+.formcont{
+    font-size: 14px;
+    width: 380px;
+    max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input{
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 100%;
+    height: 45px;
+    margin: 10px 0 4px;
+    font-size: 18px;
+    padding: 0 8px;
+}
+input[type='number']{
+    width: 80px;
+    max-width: 45%;
+}
+input[type='number']:focus, input[type='text']:focus{
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border: 1px solid transparent;
+}
+.numbs{
+    display: flex;
+    justify-content: space-between;
+}
+.numbs div{
+    width: 50%;
+}
+.button input{
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+    border: none;
+    color: hsl(0, 0%, 100%);
+}
+form div p{
+    visibility: hidden;
+    color: hsl(0, 100%, 66%);
+    margin-bottom: 10px;
+}
+.err p,.err1 p, .err2 p{
+    visibility: visible;
+}
+
+.err input, .err1 #mm, .err2 #yy{
+    border: hsl(0, 100%, 66%) 1px solid;
+}
+.suc input, .suc1 #mm, .suc2 #yy {
+    border: hsl(123, 80%, 53%) 1px solid;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    html{
+        font-size: 10px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .theBg{
+        width: 100%;
+        height: 320px;
+        background: url('./images/bg-main-mobile.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin-bottom: 20px;
+        overflow-x: clip;
+    }
+    .bigformcont{
+        width: 100%;
+    }
+    .fstCard{
+        right: calc(58% - 14.06rem);
+        bottom: -20%;
+        z-index: 1;
+    }
+    .secCard{
+        bottom: 20%;
+        left: calc(60% - 14.06rem);
+        top: auto;
+    }
+    @media only screen and (max-height : 650px) {
+        .fstCard{
+            bottom: 10%;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="theBg">
+            <div class="fstCard">
+                <img src="./images/card-logo.svg" alt="">
+                <div>
+                    <p style="font-size: 1.6rem; letter-spacing: 3px;">0000 0000 0000 0000</p>
+                    <div style="width: 100%; display: flex;justify-content: space-between;margin-top: 25px;">
+                        <span class="nm">Jane Appleseed</span>
+                        <span class="dt">09/00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="secCard"><p>ooo</p> </div>
+        </div>
+
+        <div class="bigformcont">
+            <div class="formcont">
+                <form action="/" method="get">
+                    <div id="namecont" class="name">
+                        <label for="">CARDHOLDER NAME</label><br>
+                        <input id="name" type="text" placeholder="e.g. Jane Appleseed" name="" id="" onfocus="clrclass('namecont')">
+                        <p>Can't be blank</p>
+                    </div>
+                    <div id="visa">
+                        <label for="">CARD NUMBER</label><br>
+                        <input id="ccn" type="text" placeholder="e.g. 1234 5678 9123 0000" onfocus="clrclass('visa')">
+                        <p>wrong format, numbers only</p>
+                    </div>
+                    <div class="numbs">
+                        <div id="mmyy">
+                            <label for="">EXP. DATE (MM/YY)</label><br>
+                            <input id="mm" type="number" placeholder="MM" name="mm" max="12" min="1" onfocus="clrclass('mmyy')">
+                            <input id="yy" type="number" placeholder="YY" min="22" max="50" onfocus="clrclass('mmyy')">
+                            <p>Can't be blank</p>
+                        </div>
+                        <div id="CVC">
+                            <label for="">CVC</label><br>
+                            <input id="cvc" type="text" pattern="\d*" maxlength="3" minlength="3" placeholder="e.g. 123" onfocus="clrclass('CVC')">
+                            <p>Can't be blank</p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Confirm">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
